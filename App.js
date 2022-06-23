@@ -1,27 +1,24 @@
 import React from 'react';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import {
-  StyleSheet,
-  SafeAreaView,
-  Alert,
-  Button,
-  Platform,
-  StatusBar,
-} from 'react-native';
-
+  useDimensions,
+  useDeviceOrientation,
+} from '@react-native-community/hooks';
 export default function App() {
-  const handlePress = () =>
-    Alert.alert('My Title', 'My Message', [{ text: 'Yes' }, { text: 'No' }]);
+  console.log(useDeviceOrientation());
   return (
-    <SafeAreaView style={(styles.container, containerStyle)}>
-      <Button color={'red'} title='Click me' onPress={handlePress} />
+    <SafeAreaView style={styles.container}>
+      <View
+        style={{
+          backgroundColor: 'royalblue',
+          width: '100%',
+          height: '30%',
+        }}
+      ></View>
     </SafeAreaView>
   );
 }
-const containerStyle = {
-  backgroundColor: 'pink',
-  flex: 1,
-  paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
