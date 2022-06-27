@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, SafeAreaView, StyleSheet, Image, Text } from 'react-native';
+
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
+import AppText from './app/components/AppText';
 export default function App() {
   return (
     <View
@@ -12,16 +14,9 @@ export default function App() {
         justifyContent: 'center',
       }}
     >
-      <View
-        style={{
-          backgroundColor: 'dodgerblue',
-          width: 100,
-          height: 100,
-          borderWidth: 10,
-          borderColor: 'royalblue',
-          borderRadius: 50,
-        }}
-      ></View>
+      <AppText>
+        I love nothing. My first stress reducing app. lesgoooooooooo
+      </AppText>
     </View>
   );
 }
