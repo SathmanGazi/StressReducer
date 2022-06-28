@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, SafeAreaView, StyleSheet, Image, Text } from 'react-native';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
@@ -17,6 +19,7 @@ export default function App() {
       <AppText>
         I love nothing. My first stress reducing app. lesgoooooooooo
       </AppText>
+      <MaterialCommunityIcons name='email' size={200} color='indigo' />
     </View>
   );
 }
